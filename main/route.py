@@ -9,43 +9,43 @@ from main import db
 def serviceprovider_update(emailid):
     serviceprovider = ServiceProvider.query.filter_by(emailid=emailid).first_or_404()
 
-    emailid = request.form['emailid']
-    service_advisor_name = request.form['name']
-    service_advisor_no = request.form['phone']
-    workshop_no = request.form['workshop_no']
-    latitude = request.form['lat']
-    longitude = request.form['long']
-    user_pic = request.form['userpic']
-    workshop_pic = request.form['workshoppic']
-    gst = request.form['gst']
-    service_category = request.form['category']
-    pickup_facility = request.form['pickup_facility']
-    twentyfourhour_facility = request.form['24hr']
-    general_service = request.form['general_service']
-    roadside_assistance = request.form['roadside_assistance']
-    maintenence_repair = request.form['maintenence_repair']
-    dent_repairing = request.form['dent_repairing']
-    car_wash = request.form['car_wash']
-    disc_general_service = request.form['disc_general_service']
-    disc_roadside_assistance = request.form['disc_roadside_assistance']
-    disc_maintenence_repair = request.form['disc_maintenence_repair']
-    disc_dent_repairing = request.form['disc_dent_repairing']
-    disc_car_wash = request.form['disc_car_wash']
-    bank_name = request.form['bank_name']
-    branch_name = request.form['branch_name']
-    ifsc_code = request.form['ifsc_code']
-    account_number = request.form['account_number']
-    hb_twotosix = request.form['hb_twotosix']
-    hb_sixtoten = request.form['hb_sixtoten']
-    hb_tenabove = request.form['hb_tenabove']
-    sedan_sixtoten = request.form['sedan_sixtoten']
-    sedan_tentotwentyfive = request.form['sedan_tentotwentyfive']
-    sedan_twentyfiveabove = request.form['sedan_twentyfiveabove']
-    suv_twelvetotwenty = request.form['suv_twelvetotwenty']
-    suv_twentytoforty = request.form['suv_twentytoforty']
-    suv_fortyabove = request.form['suv_fortyabove']
-    muv_fifteentoforty = request.form['muv_fifteentoforty']
-    muv_fortyabove = request.form['muv_fortyabove']
+    emailid = request.json['emailid']
+    service_advisor_name = request.json['name']
+    service_advisor_no = request.json['phone']
+    workshop_no = request.json['workshop_no']
+    latitude = request.json['lat']
+    longitude = request.json['long']
+    user_pic = request.json['userpic']
+    workshop_pic = request.json['workshoppic']
+    gst = request.json['gst']
+    service_category = request.json['category']
+    pickup_facility = request.json['pickup_facility']
+    twentyfourhour_facility = request.json['24hr']
+    general_service = request.json['general_service']
+    roadside_assistance = request.json['roadside_assistance']
+    maintenence_repair = request.json['maintenence_repair']
+    dent_repairing = request.json['dent_repairing']
+    car_wash = request.json['car_wash']
+    disc_general_service = request.json['disc_general_service']
+    disc_roadside_assistance = request.json['disc_roadside_assistance']
+    disc_maintenence_repair = request.json['disc_maintenence_repair']
+    disc_dent_repairing = request.json['disc_dent_repairing']
+    disc_car_wash = request.json['disc_car_wash']
+    bank_name = request.json['bank_name']
+    branch_name = request.json['branch_name']
+    ifsc_code = request.json['ifsc_code']
+    account_number = request.json['account_number']
+    hb_twotosix = request.json['hb_twotosix']
+    hb_sixtoten = request.json['hb_sixtoten']
+    hb_tenabove = request.json['hb_tenabove']
+    sedan_sixtoten = request.json['sedan_sixtoten']
+    sedan_tentotwentyfive = request.json['sedan_tentotwentyfive']
+    sedan_twentyfiveabove = request.json['sedan_twentyfiveabove']
+    suv_twelvetotwenty = request.json['suv_twelvetotwenty']
+    suv_twentytoforty = request.json['suv_twentytoforty']
+    suv_fortyabove = request.json['suv_fortyabove']
+    muv_fifteentoforty = request.json['muv_fifteentoforty']
+    muv_fortyabove = request.json['muv_fortyabove']
 
 
     serviceprovider.emailid = emailid
@@ -93,43 +93,43 @@ def serviceprovider_update(emailid):
 
 @app.route("/register_serviceprovider", methods=["POST"])
 def register_serviceprovider():
-    emailid = request.form['emailid']
-    service_advisor_name = request.form['name']
-    service_advisor_no = request.form['phone']
-    workshop_no = request.form['workshop_no']
-    latitude = request.form['lat']
-    longitude = request.form['long']
-    user_pic = request.form['userpic']
-    workshop_pic = request.form['workshoppic']
-    gst = request.form['gst']
-    service_category = request.form['category']
-    pickup_facility = request.form['pickup_facility']
-    twentyfourhour_facility = request.form['twentyfour']
-    general_service = request.form['general_service']
-    roadside_assistance = request.form['roadside_assistance']
-    maintenence_repair = request.form['maintenence_repair']
-    dent_repairing = request.form['dent_repairing']
-    car_wash = request.form['car_wash']
-    disc_general_service = request.form['disc_general_service']
-    disc_roadside_assistance = request.form['disc_roadside_assistance']
-    disc_maintenence_repair = request.form['disc_maintenence_repair']
-    disc_dent_repairing = request.form['disc_dent_repairing']
-    disc_car_wash = request.form['disc_car_wash']
-    bank_name = request.form['bank_name']
-    branch_name = request.form['branch_name']
-    ifsc_code = request.form['ifsc_code']
-    account_number = request.form['account_number']
-    hb_twotosix = request.form['hb_twotosix']
-    hb_sixtoten = request.form['hb_sixtoten']
-    hb_tenabove = request.form['hb_tenabove']
-    sedan_sixtoten = request.form['sedan_sixtoten']
-    sedan_tentotwentyfive = request.form['sedan_tentotwentyfive']
-    sedan_twentyfiveabove = request.form['sedan_twentyfiveabove']
-    suv_twelvetotwenty = request.form['suv_twelvetotwenty']
-    suv_twentytoforty = request.form['suv_twentytoforty']
-    suv_fortyabove = request.form['suv_fortyabove']
-    muv_fifteentoforty = request.form['muv_fifteentoforty']
-    muv_fortyabove = request.form['muv_fortyabove']
+    emailid = request.json['emailid']
+    service_advisor_name = request.json['name']
+    service_advisor_no = request.json['phone']
+    workshop_no = request.json['workshop_no']
+    latitude = request.json['lat']
+    longitude = request.json['long']
+    user_pic = request.json['userpic']
+    workshop_pic = request.json['workshoppic']
+    gst = request.json['gst']
+    service_category = request.json['category']
+    pickup_facility = request.json['pickup_facility']
+    twentyfourhour_facility = request.json['twentyfourhour_facility']
+    general_service = request.json['general_service']
+    roadside_assistance = request.json['roadside_assistance']
+    maintenence_repair = request.json['maintenence_repair']
+    dent_repairing = request.json['dent_repairing']
+    car_wash = request.json['car_wash']
+    disc_general_service = request.json['disc_general_service']
+    disc_roadside_assistance = request.json['disc_roadside_assistance']
+    disc_maintenence_repair = request.json['disc_maintenence_repair']
+    disc_dent_repairing = request.json['disc_dent_repairing']
+    disc_car_wash = request.json['disc_car_wash']
+    bank_name = request.json['bank_name']
+    branch_name = request.json['branch_name']
+    ifsc_code = request.json['ifsc_code']
+    account_number = request.json['account_number']
+    hb_twotosix = request.json['hb_twotosix']
+    hb_sixtoten = request.json['hb_sixtoten']
+    hb_tenabove = request.json['hb_tenabove']
+    sedan_sixtoten = request.json['sedan_sixtoten']
+    sedan_tentotwentyfive = request.json['sedan_tentotwentyfive']
+    sedan_twentyfiveabove = request.json['sedan_twentyfiveabove']
+    suv_twelvetotwenty = request.json['suv_twelvetotwenty']
+    suv_twentytoforty = request.json['suv_twentytoforty']
+    suv_fortyabove = request.json['suv_fortyabove']
+    muv_fifteentoforty = request.json['muv_fifteentoforty']
+    muv_fortyabove = request.json['muv_fortyabove']
 
     
     
@@ -144,7 +144,7 @@ def register_serviceprovider():
 def get_service_provider():
     all_serviceproviders = ServiceProvider.query.all()
     result = serviceproviders_schema.dump(all_serviceproviders)
-    return jsonify(result.data)
+    return jsonify(a=result.data)
 
 @app.route('/service_provider/<emailid>')
 def show_service_provider(emailid):
@@ -153,9 +153,9 @@ def show_service_provider(emailid):
 
 @app.route("/user", methods=["POST"])
 def add_user():
-    password = request.form['password']
-    email = request.form['emailid']
-    user_type = request.form['user_type']
+    password = request.json['password']
+    email = request.json['emailid']
+    user_type = request.json['user_type']
     
     
     new_user = User(password, email, user_type)
@@ -169,12 +169,12 @@ def add_user():
 def get_user():
     all_users = User.query.all()
     result = users_schema.dump(all_users)
-    return jsonify(result.data)
+    return jsonify(a=result.data)
 
 @app.route('/user/<email>')
-def show_user(emailid):
+def show_user(email):
     user = User.query.filter_by(email=email).first_or_404()
-    return jsonify(user.data)
+    return user_schema.jsonify(user)
 
 
 
